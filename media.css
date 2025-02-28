@@ -422,11 +422,6 @@
     .portfolio h1, .photography h1, .arts h1 {
         font-size: 50px;
     }
-    .navlist{
-        font-size: 5px;
-        align-items: center;
-        
-    } 
     .portfolio a h2 {
         font-size: 30px;
     }
@@ -442,4 +437,11 @@
     .project-item img {
         max-width: 100%; /* Full width on smaller screens */
     }
+    .navlist a {
+        font-size: 15px;
+    }
+    .button h2 {
+        font-size: 12px;
+    }
+
 }
