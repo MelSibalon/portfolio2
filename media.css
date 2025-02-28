@@ -443,5 +443,11 @@
     .button h2 {
         font-size: 12px;
     }
-
+@media (max-width: 350px) {
+    .navlist a {
+        font-size: 13px;
+    }
+    .button h2 {
+        font-size: 11px;
+    }
 }
