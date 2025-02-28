@@ -422,6 +422,11 @@
     .portfolio h1, .photography h1, .arts h1 {
         font-size: 50px;
     }
+    .navlist{
+        font-size: 5px;
+        align-items: center;
+        
+    } 
     .portfolio a h2 {
         font-size: 30px;
     }
