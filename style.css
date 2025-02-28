@@ -1,0 +1,627 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+} 
+
+/*home*/
+header{
+    position: fixed;
+    right: 0;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+    display:flex;
+    padding: 10px;
+    justify-content: space-between;
+    backdrop-filter:blur(80px);
+       
+}
+
+.navlist{
+    display: flex;
+}
+.navlist a{
+    font-size: 18px;
+    margin: 10px;
+    transition: all .55s ease;
+    overflow: hidden;
+    display: inline-block;
+    transition: all .50s ease;
+    line-height: 2;
+    opacity: 0;
+    align-items: center;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+      
+}
+.navlist a:hover,
+.navlist a.active{
+   transform: scale(1.2);
+
+
+}
+.logo{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+#menu-icon{
+    color:#ffffff;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+.home{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    transition: .40s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.home{
+    padding: 0 9%;
+}
+.home-content h3{
+    font-size: 20px;
+    
+}
+.home-content h1{
+
+        font-size: 40px;
+        border-bottom: 10px solid #ffffff;
+        border-top: 5px solid white;
+        animation: animateborder 2s infinite;
+        border-radius: 10px;
+}
+.home-content p {
+    font-size: 18px;
+}
+.home-content a{
+    display: inline-block;
+    background: rgba(171, 162, 162, 0.1);
+    border: 1px solid white;
+    padding: 12px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all .55s ease;
+}
+.home-content a:hover{
+    background: rgb(152, 152, 152);
+    border: 1px solid rgb(255, 255, 255);
+    transform: translateX(7px);
+    transform: translateY(5px);
+}
+
+.logopic{
+    height: auto;
+    width: 500px;
+ 
+
+} /*aboutme*/
+.about{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    
+   
+  
+}
+.about{
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.aboutcontent {
+    border: 5px solid #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 19.33px;
+    font-weight: 600;
+    
+}
+.abme{
+    text-align: center;
+    border-bottom: 5px solid black;
+    border-top: 2px solid black;
+    border-radius: 10px;
+}
+.aboutcontent a{
+    display: inline-block;
+    background: rgba(171, 162, 162, 0.1);
+    border: 1px solid white;
+    padding: 12px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all .55s ease;
+    margin: 3px;
+}
+.aboutcontent a:hover{
+    background: rgb(152, 152, 152);
+    border: 1px solid rgb(255, 255, 255);
+    transform: translateX(7px);
+    transform: translateY(5px);
+}
+.picture{
+    height: 50%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #ffffff; 
+    border-radius: 50%;   
+}
+.me{
+    height: 200%;
+    width: auto;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    
+}
+.me{
+    padding: 0 9%;
+
+}
+.name{
+    justify-content: space-between;
+    display: flex;
+    transition: .3s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.logogo{
+    height: 50px;
+    width: auto;
+}
+.skill{
+    width: 100%;
+    margin: 50px auto 60;
+    transform: translateX(50%);
+    border: 5px solid #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: animateborder 2s infinite;
+   
+}
+.skill{
+    padding: 0 9%;
+}
+.skillset{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    border-bottom: 4px solid black;
+    border-top: 2px solid black;
+    border-radius: 20px;
+
+}
+
+.bar{
+    background: rgb(171, 171, 171);
+    display: block;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(.25,.8,.20,1);
+}
+.bar span{
+    height:20px;
+    float: left;
+    background: linear-gradient(100deg, rgb(0, 0, 0)0%, rgb(57, 57, 57)100%);  
+}
+.html{
+    width: 35%;
+    animation: html 1.2s;
+}
+.css{
+    width: 20%;
+    animation: css 1.2s;
+}
+.java{
+    width: 10%;
+    animation: java 1.2s;
+}
+.javascript{
+    width: 5%;
+    animation: javascript 1.2s;
+}
+.sql{
+    width: 11%;
+    animation: sql 1.2s;
+}
+.python{
+    width: 10%;
+    animation: python 1.2s;
+}
+.django{
+    width: 3%;
+    animation: django 1.2s;
+}
+
+.hobby-container {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Adds spacing between hobby and interest */
+    margin-top: 20px;
+}
+
+.hobby,
+.interest {
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    animation: animateborder 2s infinite;
+    font-size: 19px;
+    width: 45%; /* Adjust size to fit side by side */
+}
+
+.hobby h1,
+.interest h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 1000;
+}
+
+.head{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 9% auto 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards, animateborder 2s infinite;
+    border-bottom: 10px solid black;
+    border-top: 5px solid #000000;
+    border-radius: 30px;
+
+}
+/*portfolio*/
+.portfolio {
+    max-width: 1100px;
+    margin: 9% auto 60px;
+    padding: 20px;
+    opacity: 1; /* Ensure portfolio is visible */
+    animation: slideRight 1s ease forwards;
+}
+
+.arts{
+    max-width: 1100px;
+    margin: 9% auto 60px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+
+.portfolio > div {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.photography > div {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.arts > div {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+}
+.portfolio h1{
+    text-align: center;
+    font-size: 90px;
+    font-weight: 700;
+    border-bottom: 10px solid black;
+    border-top:5px solid black;
+    border-radius: 20px;
+    animation: animateborder 2s infinite;
+}
+.photography h1{
+    text-align: center;
+    font-size: 75px;
+    font-weight: 700;
+    border-bottom: 10px solid black;
+    border-top:5px solid black;
+    border-radius: 20px;
+    animation: animateborder 2s infinite;
+    
+    
+    
+}
+.arts h1{
+    text-align: center;
+    font-size: 90px;
+    font-weight: 700;
+    border-bottom: 10px solid black;
+    border-top: 5px solid black;
+    border-radius: 20px;
+    animation: animateborder 2s infinite;
+}
+.portfolio a h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+}
+.portfolio p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.portfolio img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.photography img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.arts img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.arts img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.portfolio { 
+    text-align: center; 
+}
+.image-container { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
+    gap: 10px; 
+    justify-items: center; /* Centers images horizontally in each cell */
+    margin-top: 20px; 
+}
+
+.image-container img { 
+    width: 200px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+.project-item {
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    
+    
+}
+
+.project-item img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.2); /* Glass-like background */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 20px;
+    width: 100%; /* Increased width */
+    max-width: 1000px; /* Prevents it from being too wide on large screens */
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Grid layout for modal images */
+#modalImagesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 images per row */
+    gap: 10px; /* Spacing between images */
+    padding: 10px;
+    justify-content: center;
+}
+
+#modalImagesContainer img {
+    width: 100%; /* Make images fill their grid cell */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+#modalImagesContainer img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive */
+
+
+
+.glass-container {
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Softer border */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border-radius: 10px; /* Smooth edges */
+    padding: 20px;
+}
+
+/* Button styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.buttons h2 {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Slightly transparent border */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Glass-like background */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons h2:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker hover effect */
+    color: white;
+}
+.resume-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.education, .professional, .past_projects {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+    max-width: 400px; /* Keeps them uniform */
+    padding: 20px;
+    border: 5px solid black;
+    animation: animateborder 2s infinite;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+}
+
+.education h1, .professional h1, .past_projects h1 {
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid black;
+    border-top: 3px solid white;
+    border-radius: 10px;
+    animation: animateborder 2s infinite;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.project-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.category-btn {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 3px solid black;
+    animation: animateborder 2s infinite;
+    padding: 15px;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.category-btn:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.category-btn img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category-btn p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 8px;
+}
